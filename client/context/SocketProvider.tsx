@@ -30,7 +30,9 @@ export const useSocket = () => {
 
 export const SocketProvider = ({ children }: { children: React.ReactNode }) => {
   const socket = useMemo(() => {
-    return io(String(process.env.NEXT_PUBLIC_SOCKET_SERVER_URL));
+    return io(String(process.env.NEXT_PUBLIC_SOCKET_SERVER_URL),{
+      transports: ["polling"]
+    });
   }, []);
   const [peerState, setpeerState] = useState<any>();
   const [SocketId, setSocketId] = useState<any>(socket);
