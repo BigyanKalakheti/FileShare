@@ -7,10 +7,10 @@ const cors = require("cors");
 
 const app = express();
 
-const allowedOrigins = ["http://localhost:3000", process.env.URL];
+const allowedOrigins = ["https://file-share-next-three.vercel.app", process.env.URL];
 app.use(
   cors({
-    origin: "*",
+    origin: allowedOrigins,
     credentials: true,
   })
 );
@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 
 const io = new Server(httpServer, {
   cors: {
-    origin: "*",
+    origin: allowedOrigins,
   },
 });
 
