@@ -18,7 +18,7 @@ const ShareLink = ({ userCode }: { userCode: string }) => {
   const { theme } = useTheme();
   const handleCopyClick = () => {
     navigator.clipboard.writeText(
-      `http://localhost:3000/transfer?code=${userCode}`
+      `https://file-share-next-three.vercel.app/transfer?code=${userCode}`
     );
     toast.success("Link Copied");
   };
@@ -45,7 +45,7 @@ const ShareLink = ({ userCode }: { userCode: string }) => {
             <div className="flex flex-col w-full gap-y-2 justify-center items-center">
               <div className="flex justify-center border rounded-md w-fit p-2">
                 <QRCodeSVG
-                  value={`http://localhost:3000/transfer?code=${userCode}`}
+                  value={`https://file-share-next-three.vercel.app/transfer?code=${userCode}`}
                   size={128}
                   bgColor={theme === "dark" ? "#000000" : "#ffffff"}
                   fgColor={theme === "dark" ? "#ffffff" : "#000000"}
@@ -56,7 +56,7 @@ const ShareLink = ({ userCode }: { userCode: string }) => {
               <div className="flex w-full justify-center gap-x-1">
                 <Input
                   id="link"
-                  defaultValue={`http://localhost:3000/transfer?code=${userCode}`}
+                  defaultValue={`https://file-share-next-three.vercel.app/transfer?code=${userCode}`}
                   readOnly
                 />
                 <Button

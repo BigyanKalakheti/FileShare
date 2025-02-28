@@ -10,7 +10,7 @@ const app = express();
 const allowedOrigins = ["http://localhost:3000", process.env.URL];
 app.use(
   cors({
-    origin: allowedOrigins,
+    origin: "*",
     credentials: true,
   })
 );
@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 
 const io = new Server(httpServer, {
   cors: {
-    origin: allowedOrigins,
+    origin: "*",
   },
 });
 
