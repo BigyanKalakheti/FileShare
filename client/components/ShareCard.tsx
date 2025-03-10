@@ -79,7 +79,7 @@ const ShareCard = () => {
   useEffect(() => {
     // @ts-ignore test
     workerRef.current = new Worker(
-      new URL("../utils/worker.ts", import.meta.url)
+      new URL("@/utils/worker.ts", import.meta.url), { type: "module" }
     );
 
     addUserToSocketDB();
