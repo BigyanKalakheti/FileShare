@@ -18,7 +18,7 @@ app.use(
 const httpServer = http.createServer(app);
 
 app.get("/", (req, res) => {
-  res.send("hello from server");
+  res.send("Hi from Server");
 });
 
 const io = new Server(httpServer, {
