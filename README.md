@@ -21,16 +21,16 @@ A cryptographically secure peer-to-peer (P2P) file-sharing application using **W
 
 1. Clone the repository:
 
-   ```git clone https://github.com/BigyanKalakheti/FileShare.git```
+   ```git clone https://github.com/BigyanKalakheti/FileShare.git```<br/>
    ```cd FileShare ```
 
 2. Install dependencies:
 
-``npm install``
+    ``npm install``
 
 3. Set up environment variables:
 
-Create a .env file in the root directory:
+    Create a .env file in the root directory:<br/>
     ```NEXT_PUBLIC_SOCKET_SERVER_URL=<your_socket_server_url>```
 
 4. Start the application:
