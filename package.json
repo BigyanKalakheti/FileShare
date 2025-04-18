@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "next-https": "^1.1.16"
+  }
+}

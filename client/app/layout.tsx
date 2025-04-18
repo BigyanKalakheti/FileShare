@@ -20,8 +20,11 @@ export const metadata: Metadata = {
   ],
   keywords: keywordsForMetaData,
   icons: {
-    icon: "./fastdroplight.png",
+    icon: "/fastdroplight.png",        // Fix path (remove dot)
+    apple: "/fastdroplight.png",       // Add apple-touch-icon
   },
+  manifest: "/manifest.json",          // 👈 Add this
+  themeColor: "#0d1117",                // 👈 Add this
 };
 
 export default function RootLayout({
